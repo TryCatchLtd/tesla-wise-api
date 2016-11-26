@@ -1,0 +1,36 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# MyTesla
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Users [/users]
+
+### List Users [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "1234abcd",
+                "email": "some.email@domain.tld"
+            }
+        ]
+
+### Create a New User [POST]
+
+Create a new user
+
++ Request (application/json)
+
+        {
+            "email": "some.email@domain.tld"
+        }
+
++ Response 201 (application/json)
+
+        {
+            "id": "1234abcd",
+            "email": "some.email@domain.tld"
+        }
